@@ -1,0 +1,51 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "@yeiniel/angular-auth0": {
+      "projectType": "library",
+      "root": "projects/yeiniel/angular-auth0",
+      "sourceRoot": "projects/yeiniel/angular-auth0/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/yeiniel/angular-auth0/tsconfig.lib.json",
+            "project": "projects/yeiniel/angular-auth0/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/yeiniel/angular-auth0/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/yeiniel/angular-auth0/src/test.ts",
+            "tsConfig": "projects/yeiniel/angular-auth0/tsconfig.spec.json",
+            "karmaConfig": "projects/yeiniel/angular-auth0/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/yeiniel/angular-auth0/tsconfig.lib.json",
+              "projects/yeiniel/angular-auth0/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@yeiniel/angular-auth0"
+}

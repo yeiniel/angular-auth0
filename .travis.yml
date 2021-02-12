@@ -1,0 +1,15 @@
+dist: xenial
+
+language: node_js
+
+node_js:
+  - node
+
+addons:
+  chrome: stable
+
+script:
+  - npm test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox --code-coverage
+
+after_success:
+  - cat ./coverage/yeiniel/angular-auth0/lcov.info | ./node_modules/coveralls/bin/coveralls.js

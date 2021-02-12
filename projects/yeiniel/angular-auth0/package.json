@@ -1,0 +1,23 @@
+{
+  "name": "@yeiniel/angular-auth0",
+  "description": "Angular module used to integrate Auth0 authentication",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeiniel/angular-auth0.git"
+  },
+  "author": {
+    "name": "Yeiniel Suarez Sosa",
+    "email": "yeiniel@gmail.com"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2",
+    "@auth0/auth0-spa-js": "^1.13.6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "keywords": ["angular", "auth0"]
+}
